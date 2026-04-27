@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFF5F7] text-[#5D4037];
+  }
+}
+
+@layer components {
+  .mesh-bg {
+    @apply fixed inset-0 z-0 overflow-hidden pointer-events-none;
+  }
+
+  .circle {
+    @apply absolute rounded-full blur-[80px] opacity-60;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border-2 border-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(255,182,193,0.2)];
+  }
+
+  .glass-input {
+    @apply bg-[#FFF] border-2 border-[#FFEDF2] rounded-2xl px-5 py-4 text-[#5D4037] placeholder-[#D1B3B9] focus:ring-4 focus:ring-[#FFD1DC]/50 focus:border-[#FFD1DC] outline-none transition-all;
+  }
+
+  .glass-button-primary {
+    @apply bg-[#FFB7C5] hover:bg-[#FFA4B5] text-white font-black py-4 px-8 rounded-2xl transition-all shadow-[0_4px_15px_rgba(255,183,197,0.4)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider;
+  }
+
+  .glass-button-ghost {
+    @apply bg-white border-2 border-[#FFEDF2] text-[#FFB7C5] py-2 px-5 rounded-2xl hover:bg-[#FFF5F7] transition-all active:scale-95 font-bold;
+  }
+}
